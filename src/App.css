@@ -1,9 +1,25 @@
 .app {
   min-height: 100svh;
+  max-width: 1280px;
+  margin: 0 auto;
   background: linear-gradient(160deg, #0f172a 0%, #111827 45%, #0b1120 100%);
   color: var(--dash-text, #e5e7eb);
   padding: 1.5rem clamp(1rem, 3vw, 2rem) 2.5rem;
   box-sizing: border-box;
+}
+
+.app__home-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--dash-muted, #9ca3af);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.app__home-link:hover {
+  color: #f3f4f6;
 }
 
 .app__title {

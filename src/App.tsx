@@ -1,36 +1,15 @@
-import { FraudNetworkGraph } from './components/FraudNetworkGraph';
-import { FraudScoreMonitor } from './components/FraudScoreMonitor';
-import { IndiaFraudHeatmap } from './components/IndiaFraudHeatmap';
-import { VoiceVerification } from './components/VoiceVerification';
-import './App.css';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Dashboard } from './pages/Dashboard';
+import { LandingPage } from './pages/LandingPage';
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <header>
-        <h1 className="app__title">Fraud operations dashboard</h1>
-        <p className="app__subtitle">
-          Frontend mock: voice checks, network graph, live score trend, and regional heatmap. Data is
-          synthetic for demonstration.
-        </p>
-      </header>
-
-      <div className="app__grid">
-        <div className="app__card">
-          <VoiceVerification />
-        </div>
-        <div className="app__card">
-          <FraudScoreMonitor />
-        </div>
-        <div className="app__card app__card--wide">
-          <FraudNetworkGraph />
-        </div>
-        <div className="app__card app__card--wide">
-          <IndiaFraudHeatmap />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
