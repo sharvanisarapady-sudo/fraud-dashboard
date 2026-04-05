@@ -1,0 +1,49 @@
+.graph-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  min-height: 320px;
+}
+
+.graph-panel__header {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dash-text, #e5e7eb);
+}
+
+.graph-panel__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--dash-muted, #9ca3af);
+}
+
+.graph-panel__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.graph-panel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.graph-panel__canvas-wrap {
+  flex: 1;
+  min-height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--dash-border, #374151);
+  background: #0b1220;
+}
+
+.graph-panel__hint {
+  font-size: 0.8rem;
+  color: var(--dash-muted, #6b7280);
+  margin: 0;
+}
