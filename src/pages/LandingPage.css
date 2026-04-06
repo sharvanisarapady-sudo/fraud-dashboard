@@ -201,3 +201,28 @@
     transform: none;
   }
 }
+.modules {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.modules__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modules__grid a {
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.modules__grid a:hover {
+  transform: scale(1.05);
+}
