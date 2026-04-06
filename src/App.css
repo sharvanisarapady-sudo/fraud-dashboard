@@ -9,30 +9,67 @@
   box-sizing: border-box;
 }
 
-/* 🔥 FORCE ALL TEXT DARK */
-* {
-  color: #0f172a !important;
+/* home link */
+.app__home-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
 }
 
-/* 📦 CARDS */
+.app__home-link:hover {
+  color: #0f172a;
+}
+
+/* title */
+.app__title {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* subtitle */
+.app__subtitle {
+  margin: 0 0 1.75rem;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* grid */
+.app__grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 960px) {
+  .app__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* cards */
 .app__card {
-  background: #ffffff !important;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 1.25rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* 🌐 DROPDOWN (English box) */
+/* dropdown */
 select {
-  background: #ffffff !important;
-  color: #0f172a !important;
+  background: #ffffff;
+  color: #0f172a;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 8px 12px;
 }
 
-/* 🔘 BUTTON */
+/* button */
 button {
   border-radius: 8px;
   padding: 8px 14px;
@@ -42,55 +79,39 @@ button {
 
 button.primary {
   background: #22c55e;
-  color: white !important;
+  color: white;
 }
 
-/* 🔥🔥🔥 TRANSCRIPT BOX MAIN FIX */
-textarea {
-  background: #ffffff !important;
-  color: #0f172a !important;
-  border: 1px solid #e2e8f0 !important;
-  border-radius: 12px;
-  padding: 12px;
-  min-height: 150px;
+/* graph */
+.graph-container {
+  background: #f1f5f9;
+  border-radius: 10px;
 }
 
-/* 🔥 EXTRA FORCE (YOUR DARK BOX ISSUE) */
-textarea,
-div,
-section {
-  background-color: inherit;
-}
-
-/* 🎯 TARGET DARK CONTAINER */
-div[style*="background"],
-.voice,
-.voice-container,
-.voice-box {
-  background: #ffffff !important;
-}
-
-/* 📊 SCORE BOX */
+/* score box */
 .status-box,
 .score-box {
-  background: #e2e8f0 !important;
-  color: #0f172a !important;
+  background: #e2e8f0;
+  color: #0f172a;
   padding: 10px;
   border-radius: 10px;
 }
 
-/* 📊 GRAPH */
-.graph-container {
-  background: #f1f5f9 !important;
-  border-radius: 10px;
-}
+/* risk colors */
+.high-risk { color: #ef4444; }
+.medium-risk { color: #f59e0b; }
+.low-risk { color: #22c55e; }
 
-/* 📊 CHART TEXT */
-.recharts-text {
-  fill: #0f172a !important;
-}
+/* ============================= */
+/* 🔥 ONLY TRANSCRIPT BOX FIX */
+/* ============================= */
 
-/* 🎯 RISK COLORS */
-.high-risk { color: #ef4444 !important; }
-.medium-risk { color: #f59e0b !important; }
-.low-risk { color: #22c55e !important; }
+/* this targets the dark box you showed */
+.voice-verification .transcript,
+.voice-verification div:last-child {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+}
