@@ -59,70 +59,56 @@
   }
 }
 
-/* 🔥 CARD */
+/* 🔥 CARD (ALL BOXES BASE STYLE) */
 .app__card {
-  background: #ffffff;
+  background: #ffffff !important;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 1.25rem 1.35rem;
   text-align: left;
-  color: #0f172a;
-
-  /* soft shadow */
+  color: #0f172a !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-
   min-height: 0;
 }
 
-/* wide card */
-.app__card--wide {
-  grid-column: 1 / -1;
-}
-
-/* 🧠 FORCE TEXT TO BLACK (important fix) */
+/* 🧠 FORCE TEXT TO BLACK */
 .app *,
 .app__card *,
-p, span, label, h1, h2, h3 {
-  color: #0f172a;
+h1, h2, h3, p, span, label {
+  color: #0f172a !important;
 }
 
-/* 🎤 VOICE TRANSCRIPT BOX FIX */
+/* 🌐 LANGUAGE DROPDOWN (English box) */
+select {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+/* 🎤 TRANSCRIPT BOX */
 textarea,
 .transcript {
   background: #ffffff !important;
   color: #0f172a !important;
   border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* 📊 SCORE BOX (top dark bar fix) */
+.status-box,
+.score-box {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
   border-radius: 10px;
-  padding: 10px;
-}
-
-/* 🎛 SELECT / DROPDOWN */
-select {
-  background: #ffffff;
-  color: #0f172a;
-  border: 1px solid #cbd5f5;
-  padding: 6px 10px;
-  border-radius: 8px;
-}
-
-/* 🔘 BUTTONS */
-button {
-  border-radius: 8px;
-  padding: 8px 14px;
-  border: none;
+  padding: 10px 14px;
   font-weight: 500;
 }
 
-button.primary {
-  background: #22c55e;
-  color: white;
-}
-
-button.primary:hover {
-  background: #16a34a;
-}
-
-/* 📊 GRAPH BACKGROUND FIX */
+/* 📊 GRAPH BACKGROUND */
 .graph-container {
   background: #f1f5f9 !important;
   border-radius: 10px;
@@ -133,23 +119,33 @@ button.primary:hover {
   fill: #0f172a !important;
 }
 
-/* 📊 STATUS BOX (top dark bar fix) */
-.status-box {
-  background: #e2e8f0;
-  color: #0f172a;
-  border-radius: 10px;
-  padding: 10px;
+/* 🔘 BUTTONS */
+button {
+  border-radius: 8px;
+  padding: 8px 14px;
+  border: none;
+  font-weight: 500;
 }
 
-/* 🎯 RISK COLORS (keep these!) */
+/* green button */
+button.primary {
+  background: #22c55e;
+  color: white !important;
+}
+
+button.primary:hover {
+  background: #16a34a;
+}
+
+/* 🎯 RISK COLORS (keep strong) */
 .high-risk {
-  color: #ef4444;
+  color: #ef4444 !important;
 }
 
 .medium-risk {
-  color: #f59e0b;
+  color: #f59e0b !important;
 }
 
 .low-risk {
-  color: #22c55e;
+  color: #22c55e !important;
 }
