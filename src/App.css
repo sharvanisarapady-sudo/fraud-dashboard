@@ -1,17 +1,16 @@
+/* 🌟 MAIN APP LIGHT THEME */
+
 .app {
   min-height: 100svh;
   max-width: 1280px;
   margin: 0 auto;
-
-  /* ✅ LIGHT BACKGROUND */
   background: #f8fafc;
-
   color: #0f172a;
   padding: 1.5rem clamp(1rem, 3vw, 2rem) 2.5rem;
   box-sizing: border-box;
 }
 
-/* home link */
+/* 🔗 Home link */
 .app__home-link {
   display: inline-block;
   font-size: 0.85rem;
@@ -26,7 +25,7 @@
   color: #0f172a;
 }
 
-/* title */
+/* 🏷 Title */
 .app__title {
   margin: 0 0 0.35rem;
   font-size: clamp(1.5rem, 3vw, 2rem);
@@ -36,7 +35,7 @@
   text-align: left;
 }
 
-/* subtitle */
+/* 📝 Subtitle */
 .app__subtitle {
   margin: 0 0 1.75rem;
   font-size: 0.95rem;
@@ -46,7 +45,7 @@
   line-height: 1.5;
 }
 
-/* grid */
+/* 📦 Grid */
 .app__grid {
   display: grid;
   gap: 1.25rem;
@@ -55,20 +54,21 @@
 
 @media (min-width: 960px) {
   .app__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
   }
 }
 
-/* 🔥 CARD (IMPORTANT CHANGE) */
+/* 🔥 CARD */
 .app__card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 1.25rem 1.35rem;
   text-align: left;
+  color: #0f172a;
 
-  /* softer shadow */
+  /* soft shadow */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 
   min-height: 0;
@@ -79,8 +79,77 @@
   grid-column: 1 / -1;
 }
 
-@media (min-width: 960px) {
-  .app__card--wide {
-    grid-column: 1 / -1;
-  }
+/* 🧠 FORCE TEXT TO BLACK (important fix) */
+.app *,
+.app__card *,
+p, span, label, h1, h2, h3 {
+  color: #0f172a;
+}
+
+/* 🎤 VOICE TRANSCRIPT BOX FIX */
+textarea,
+.transcript {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* 🎛 SELECT / DROPDOWN */
+select {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5f5;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* 🔘 BUTTONS */
+button {
+  border-radius: 8px;
+  padding: 8px 14px;
+  border: none;
+  font-weight: 500;
+}
+
+button.primary {
+  background: #22c55e;
+  color: white;
+}
+
+button.primary:hover {
+  background: #16a34a;
+}
+
+/* 📊 GRAPH BACKGROUND FIX */
+.graph-container {
+  background: #f1f5f9 !important;
+  border-radius: 10px;
+}
+
+/* 📊 CHART TEXT */
+.recharts-text {
+  fill: #0f172a !important;
+}
+
+/* 📊 STATUS BOX (top dark bar fix) */
+.status-box {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* 🎯 RISK COLORS (keep these!) */
+.high-risk {
+  color: #ef4444;
+}
+
+.medium-risk {
+  color: #f59e0b;
+}
+
+.low-risk {
+  color: #22c55e;
 }
